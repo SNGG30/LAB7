@@ -39,7 +39,7 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
           </Group>
-          <Component id="Tabs" alignment="0" max="32767" attributes="0"/>
+          <Component id="sp_Ata" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -48,7 +48,7 @@
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="28" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Tabs" max="32767" attributes="0"/>
+              <Component id="sp_Ata" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,7 +62,7 @@
         <Property name="text" type="java.lang.String" value="PLANTS VS ZOMBIES"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="Tabs">
+    <Container class="javax.swing.JTabbedPane" name="sp_Ata">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -83,7 +83,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="409" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="419" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -102,65 +102,54 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="Txt_Alt" min="-2" pref="43" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="Txt_Rang" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="Txt_TipoP" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="Txt_Projectile" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="Txt_NomP" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tf_NameP" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                                   <Component id="Txt_HpP" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="tf_HpP" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="sp_HpP" min="-2" pref="118" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="Txt_AtkP" min="-2" max="-2" attributes="0"/>
-                                          <Component id="tf_AtkP" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                      <Component id="Btn_Create" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                      <Component id="Txt_Peso" min="-2" pref="43" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-                                      <Component id="Txt_Mexp" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Btn_CreateP" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
-                                      <Component id="Txt_ColorP" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Txt_AtkP" min="-2" max="-2" attributes="0"/>
+                                          <Component id="sp_AtkP" min="-2" pref="118" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="Txt_Dureza" min="-2" pref="43" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="sp_Mexp" max="32767" attributes="0"/>
+                                  <Component id="Txt_Mexp" max="32767" attributes="0"/>
+                                  <Component id="Txt_Alt" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="sp_Alt" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Txt_Projectile" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Txt_Peso" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="tf_NameProj" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="sp_Peso" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="sp_Dureza" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="tf_Color" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="Txt_Dureza" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="Txt_ColorP" min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -171,13 +160,16 @@
                               </Group>
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="RB_Disparo" min="-2" pref="98" max="-2" attributes="0"/>
                                   <Component id="RB_Explosiva" min="-2" pref="98" max="-2" attributes="0"/>
                                   <Component id="RB_Defensa" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="RB_Disparo" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -196,48 +188,53 @@
                           <Component id="RB_Bajo" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RB_Explosiva" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tf_NameP" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tf_AtkP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sp_AtkP" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="RB_Disparo" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RB_Medio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace pref="33" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="RB_Defensa" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Txt_HpP" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RB_Alto" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tf_HpP" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Btn_Create" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="89" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="Txt_Alt" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Txt_Projectile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Btn_CreateP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sp_HpP" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="Txt_ColorP" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="Txt_Mexp" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="Txt_Peso" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <EmptySpace pref="221" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="Txt_Dureza" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Txt_Mexp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Txt_Projectile" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Txt_ColorP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="sp_Mexp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tf_NameProj" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tf_Color" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Txt_Alt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Txt_Peso" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Txt_Dureza" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="sp_Alt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sp_Peso" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sp_Dureza" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -300,7 +297,7 @@
                 <Property name="text" type="java.lang.String" value="Dureza"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="Btn_Create">
+            <Component class="javax.swing.JButton" name="Btn_CreateP">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Crear"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -308,7 +305,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_CreateActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_CreatePActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="RB_Bajo">
@@ -373,15 +370,27 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_NamePActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="tf_AtkP">
+            <Component class="javax.swing.JSpinner" name="sp_Mexp">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_NameProj">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_AtkPActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_NameProjActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="tf_HpP">
+            <Component class="javax.swing.JTextField" name="tf_Color">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_HpPActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_ColorActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Alt">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Peso">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Dureza">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_AtkP">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_HpP">
             </Component>
           </SubComponents>
         </Container>
@@ -398,40 +407,85 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Txt_AddPer" min="-2" max="-2" attributes="0"/>
-                          <Component id="Txt_expage" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="Txt_TipoZ" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="Txt_Direccion" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="Txt_NomZ" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
-                              <Component id="Txt_Rage" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="Txt_AtkZ" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="Txt_Size" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="Txt_HpZ" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                              <Component id="sp_Enojo" min="-2" pref="109" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="Txt_ColorB" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Txt_Age" min="-2" pref="37" max="-2" attributes="0"/>
+                              <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="Txt_Rage" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Txt_HpZ" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="Txt_TipoZ" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Component id="sp_HpZ" min="-2" pref="109" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jRadioButton2" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="Btn_CreateZ" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="224" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="Txt_NomZ" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="tf_NameZ" min="-2" pref="170" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="Txt_Age" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="sp_Edad" min="-2" pref="109" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="Txt_AtkZ" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="sp_AtkZ" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButton1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="sp_Size" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                                          <Component id="Txt_Size" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="Txt_expage" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="Txt_ColorB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="Txt_Direccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="sp_Expage" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace pref="101" max="32767" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="Txt_AddPer" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="tf_Per" min="-2" pref="170" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="tf_ColorB" min="-2" pref="170" max="-2" attributes="0"/>
+                                                          <Component id="tf_Img" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Component id="Btn_add" min="-2" pref="42" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="127" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -441,24 +495,78 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Txt_NomZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Txt_Age" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Txt_Rage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tf_NameZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sp_Edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sp_Enojo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Txt_AtkZ" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Txt_Size" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Txt_HpZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Txt_AddPer" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="Txt_AddPer" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Txt_expage" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                      <Component id="Txt_Direccion" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="Txt_Age" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Txt_TipoZ" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="Txt_ColorB" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="99" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="sp_AtkZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sp_Size" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_Per" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Btn_add" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="193" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Txt_HpZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Txt_expage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="sp_HpZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="sp_Expage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                      <Component id="Txt_ColorB" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="Txt_TipoZ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tf_ColorB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Txt_Direccion" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="tf_Img" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Btn_CreateZ" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -518,6 +626,86 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Direccion Imagen"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_NameZ">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_NameZActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Edad">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Enojo">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_AtkZ">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Size">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_Per">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_PerActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="Btn_add">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_addActionPerformed"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JSpinner" name="sp_HpZ">
+            </Component>
+            <Component class="javax.swing.JSpinner" name="sp_Expage">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clasico"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cargado"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="Btn_CreateZ">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_CreateZActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_ColorB">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_ColorBActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_Img">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_ImgActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

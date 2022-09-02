@@ -29,7 +29,7 @@ public class Principal extends javax.swing.JFrame {
         buttong_Rang = new javax.swing.ButtonGroup();
         buttong_TypP = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        Tabs = new javax.swing.JTabbedPane();
+        sp_Ata = new javax.swing.JTabbedPane();
         T_Test = new javax.swing.JPanel();
         T_Plantas = new javax.swing.JPanel();
         Txt_Rang = new javax.swing.JLabel();
@@ -43,7 +43,7 @@ public class Principal extends javax.swing.JFrame {
         Txt_Alt = new javax.swing.JLabel();
         Txt_Peso = new javax.swing.JLabel();
         Txt_Dureza = new javax.swing.JLabel();
-        Btn_Create = new javax.swing.JButton();
+        Btn_CreateP = new javax.swing.JButton();
         RB_Bajo = new javax.swing.JRadioButton();
         RB_Medio = new javax.swing.JRadioButton();
         RB_Alto = new javax.swing.JRadioButton();
@@ -51,8 +51,14 @@ public class Principal extends javax.swing.JFrame {
         RB_Disparo = new javax.swing.JRadioButton();
         RB_Defensa = new javax.swing.JRadioButton();
         tf_NameP = new javax.swing.JTextField();
-        tf_AtkP = new javax.swing.JTextField();
-        tf_HpP = new javax.swing.JTextField();
+        sp_Mexp = new javax.swing.JSpinner();
+        tf_NameProj = new javax.swing.JTextField();
+        tf_Color = new javax.swing.JTextField();
+        sp_Alt = new javax.swing.JSpinner();
+        sp_Peso = new javax.swing.JSpinner();
+        sp_Dureza = new javax.swing.JSpinner();
+        sp_AtkP = new javax.swing.JSpinner();
+        sp_HpP = new javax.swing.JSpinner();
         T_Zombies = new javax.swing.JPanel();
         Txt_NomZ = new javax.swing.JLabel();
         Txt_Age = new javax.swing.JLabel();
@@ -65,6 +71,22 @@ public class Principal extends javax.swing.JFrame {
         Txt_TipoZ = new javax.swing.JLabel();
         Txt_ColorB = new javax.swing.JLabel();
         Txt_Direccion = new javax.swing.JLabel();
+        tf_NameZ = new javax.swing.JTextField();
+        sp_Edad = new javax.swing.JSpinner();
+        sp_Enojo = new javax.swing.JSpinner();
+        sp_AtkZ = new javax.swing.JSpinner();
+        sp_Size = new javax.swing.JSpinner();
+        tf_Per = new javax.swing.JTextField();
+        Btn_add = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        sp_HpZ = new javax.swing.JSpinner();
+        sp_Expage = new javax.swing.JSpinner();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        Btn_CreateZ = new javax.swing.JButton();
+        tf_ColorB = new javax.swing.JTextField();
+        tf_Img = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PVZ");
@@ -81,10 +103,10 @@ public class Principal extends javax.swing.JFrame {
         );
         T_TestLayout.setVerticalGroup(
             T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 409, Short.MAX_VALUE)
+            .addGap(0, 419, Short.MAX_VALUE)
         );
 
-        Tabs.addTab("Test", T_Test);
+        sp_Ata.addTab("Test", T_Test);
 
         Txt_Rang.setText("Rango");
 
@@ -108,11 +130,11 @@ public class Principal extends javax.swing.JFrame {
 
         Txt_Dureza.setText("Dureza");
 
-        Btn_Create.setText("Crear");
-        Btn_Create.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Btn_Create.addActionListener(new java.awt.event.ActionListener() {
+        Btn_CreateP.setText("Crear");
+        Btn_CreateP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Btn_CreateP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_CreateActionPerformed(evt);
+                Btn_CreatePActionPerformed(evt);
             }
         });
 
@@ -155,15 +177,15 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        tf_AtkP.addActionListener(new java.awt.event.ActionListener() {
+        tf_NameProj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_AtkPActionPerformed(evt);
+                tf_NameProjActionPerformed(evt);
             }
         });
 
-        tf_HpP.addActionListener(new java.awt.event.ActionListener() {
+        tf_Color.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_HpPActionPerformed(evt);
+                tf_ColorActionPerformed(evt);
             }
         });
 
@@ -173,50 +195,45 @@ public class Principal extends javax.swing.JFrame {
             T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(T_PlantasLayout.createSequentialGroup()
                 .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_PlantasLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(Txt_Alt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_PlantasLayout.createSequentialGroup()
+                    .addGroup(T_PlantasLayout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(Txt_Rang, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(115, 115, 115)
                         .addComponent(Txt_TipoP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(114, 114, 114)))
-                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(T_PlantasLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(Txt_Projectile))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_PlantasLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(114, 114, 114)
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Txt_NomP)
                             .addComponent(tf_NameP, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Txt_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(sp_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(T_PlantasLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Txt_AtkP)
-                                    .addComponent(tf_AtkP, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(T_PlantasLayout.createSequentialGroup()
                                 .addGap(68, 68, 68)
-                                .addComponent(Btn_Create)))
-                        .addGap(47, 47, 47))))
-            .addGroup(T_PlantasLayout.createSequentialGroup()
-                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Btn_CreateP))
+                            .addGroup(T_PlantasLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Txt_AtkP)
+                                    .addComponent(sp_AtkP, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(T_PlantasLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(sp_Mexp)
+                            .addComponent(Txt_Mexp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Txt_Alt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_Alt))
+                        .addGap(54, 54, 54)
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(T_PlantasLayout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(Txt_Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(123, 123, 123)
-                                .addComponent(Txt_Mexp))
-                            .addGroup(T_PlantasLayout.createSequentialGroup()
-                                .addGap(166, 166, 166)
-                                .addComponent(Txt_ColorP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(70, 70, 70)
-                        .addComponent(Txt_Dureza, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Txt_Projectile)
+                            .addComponent(Txt_Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_NameProj, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sp_Dureza, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_Color, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Txt_Dureza, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Txt_ColorP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(T_PlantasLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,10 +242,12 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(RB_Alto, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(44, 44, 44)
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RB_Disparo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RB_Explosiva, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RB_Defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(RB_Defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(T_PlantasLayout.createSequentialGroup()
+                                .addComponent(RB_Disparo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(89, 89, 89)))))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         T_PlantasLayout.setVerticalGroup(
             T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,42 +263,47 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(RB_Bajo)
                     .addComponent(RB_Explosiva)
                     .addComponent(tf_NameP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_AtkP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sp_AtkP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RB_Disparo)
                     .addComponent(RB_Medio))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RB_Defensa)
                     .addComponent(Txt_HpP)
                     .addComponent(RB_Alto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Btn_Create))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_PlantasLayout.createSequentialGroup()
+                .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(T_PlantasLayout.createSequentialGroup()
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Btn_CreateP)
+                            .addComponent(sp_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(221, Short.MAX_VALUE))
+                    .addGroup(T_PlantasLayout.createSequentialGroup()
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Txt_Mexp)
+                            .addComponent(Txt_Projectile)
+                            .addComponent(Txt_ColorP))
+                        .addGap(18, 18, 18)
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sp_Mexp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_NameProj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_Color, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Txt_Alt)
-                            .addComponent(Txt_Projectile))
-                        .addGap(28, 28, 28)
-                        .addComponent(Txt_ColorP)
-                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(T_PlantasLayout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(Txt_Mexp))
-                            .addGroup(T_PlantasLayout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(Txt_Peso)))
-                        .addGap(68, 68, 68))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_PlantasLayout.createSequentialGroup()
-                        .addComponent(Txt_Dureza)
-                        .addGap(83, 83, 83))))
+                            .addComponent(Txt_Peso)
+                            .addComponent(Txt_Dureza))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sp_Alt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_Peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_Dureza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33))))
         );
 
-        Tabs.addTab("Plantas", T_Plantas);
+        sp_Ata.addTab("Plantas", T_Plantas);
 
         Txt_NomZ.setText("Nombre");
 
@@ -303,38 +327,126 @@ public class Principal extends javax.swing.JFrame {
 
         Txt_Direccion.setText("Direccion Imagen");
 
+        tf_NameZ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_NameZActionPerformed(evt);
+            }
+        });
+
+        tf_Per.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_PerActionPerformed(evt);
+            }
+        });
+
+        Btn_add.setText("+");
+        Btn_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_addActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jRadioButton1.setText("Clasico");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setText("Cargado");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        Btn_CreateZ.setText("Crear");
+        Btn_CreateZ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_CreateZActionPerformed(evt);
+            }
+        });
+
+        tf_ColorB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_ColorBActionPerformed(evt);
+            }
+        });
+
+        tf_Img.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_ImgActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout T_ZombiesLayout = new javax.swing.GroupLayout(T_Zombies);
         T_Zombies.setLayout(T_ZombiesLayout);
         T_ZombiesLayout.setHorizontalGroup(
             T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_ZombiesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Txt_AddPer)
-                    .addComponent(Txt_expage)
-                    .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Txt_TipoZ, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Txt_Direccion)))
-                .addGap(230, 230, 230))
-            .addGroup(T_ZombiesLayout.createSequentialGroup()
-                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(T_ZombiesLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(sp_Enojo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, T_ZombiesLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(Txt_NomZ)
-                        .addGap(191, 191, 191)
-                        .addComponent(Txt_Rage, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(Txt_AtkZ)
-                        .addGap(33, 33, 33)
-                        .addComponent(Txt_Size)
-                        .addGap(93, 93, 93)
-                        .addComponent(Txt_HpZ, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(T_ZombiesLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Txt_ColorB)
-                            .addComponent(Txt_Age, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(127, Short.MAX_VALUE))
+                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_ZombiesLayout.createSequentialGroup()
+                                .addComponent(Txt_Rage, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(155, 155, 155))
+                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Txt_HpZ, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Txt_TipoZ, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sp_HpZ, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Btn_CreateZ)))
+                                .addGap(12, 12, 12)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Txt_NomZ)
+                                            .addComponent(tf_NameZ, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(113, 113, 113)
+                                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Txt_Age, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(sp_Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Txt_AtkZ)
+                                            .addComponent(sp_AtkZ, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(90, 90, 90)
+                                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(sp_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(Txt_Size)
+                                                    .addComponent(Txt_expage)
+                                                    .addComponent(Txt_ColorB)
+                                                    .addComponent(Txt_Direccion)
+                                                    .addComponent(sp_Expage, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(Txt_AddPer)
+                                                    .addComponent(tf_Per, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(tf_ColorB, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(tf_Img, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addComponent(Btn_add, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(35, 35, 35))
         );
         T_ZombiesLayout.setVerticalGroup(
             T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,26 +454,65 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Txt_NomZ)
-                    .addComponent(Txt_Rage)
+                    .addComponent(Txt_Age)
+                    .addComponent(Txt_Rage))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_NameZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sp_Edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sp_Enojo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Txt_AtkZ)
                     .addComponent(Txt_Size)
-                    .addComponent(Txt_HpZ))
-                .addGap(40, 40, 40)
-                .addComponent(Txt_AddPer)
+                    .addComponent(Txt_AddPer))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Txt_expage)
-                .addGap(66, 66, 66)
-                .addComponent(Txt_Direccion)
-                .addGap(38, 38, 38)
-                .addComponent(Txt_Age)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Txt_TipoZ)
-                .addGap(19, 19, 19)
-                .addComponent(Txt_ColorB)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sp_AtkZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sp_Size, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_Per, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Btn_add))
+                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_ZombiesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
+                    .addGroup(T_ZombiesLayout.createSequentialGroup()
+                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Txt_HpZ)
+                                    .addComponent(Txt_expage))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(sp_HpZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sp_Expage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(13, 13, 13)
+                                .addComponent(Txt_ColorB)
+                                .addGap(6, 6, 6)
+                                .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Txt_TipoZ)
+                                    .addComponent(tf_ColorB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
+                                .addComponent(jRadioButton1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_ZombiesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Txt_Direccion)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                .addComponent(jRadioButton2)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(T_ZombiesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tf_Img, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Btn_CreateZ)))
+                        .addContainerGap())))
         );
 
-        Tabs.addTab("Zombies", T_Zombies);
+        sp_Ata.addTab("Zombies", T_Zombies);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -371,7 +522,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(212, 212, 212))
-            .addComponent(Tabs)
+            .addComponent(sp_Ata)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,15 +530,15 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Tabs))
+                .addComponent(sp_Ata))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn_CreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CreateActionPerformed
+    private void Btn_CreatePActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CreatePActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Btn_CreateActionPerformed
+    }//GEN-LAST:event_Btn_CreatePActionPerformed
 
     private void RB_BajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB_BajoActionPerformed
         // TODO add your handling code here:
@@ -405,13 +556,45 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_NamePActionPerformed
 
-    private void tf_AtkPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_AtkPActionPerformed
+    private void tf_NameProjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NameProjActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_AtkPActionPerformed
+    }//GEN-LAST:event_tf_NameProjActionPerformed
 
-    private void tf_HpPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_HpPActionPerformed
+    private void tf_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_ColorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_HpPActionPerformed
+    }//GEN-LAST:event_tf_ColorActionPerformed
+
+    private void tf_NameZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NameZActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_NameZActionPerformed
+
+    private void tf_PerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_PerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_PerActionPerformed
+
+    private void Btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_addActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_addActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void Btn_CreateZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CreateZActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_CreateZActionPerformed
+
+    private void tf_ColorBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_ColorBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_ColorBActionPerformed
+
+    private void tf_ImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_ImgActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_ImgActionPerformed
 
     /**
      * @param args the command line arguments
@@ -449,7 +632,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn_Create;
+    private javax.swing.JButton Btn_CreateP;
+    private javax.swing.JButton Btn_CreateZ;
+    private javax.swing.JButton Btn_add;
     private javax.swing.JRadioButton RB_Alto;
     private javax.swing.JRadioButton RB_Bajo;
     private javax.swing.JRadioButton RB_Defensa;
@@ -459,7 +644,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel T_Plantas;
     private javax.swing.JPanel T_Test;
     private javax.swing.JPanel T_Zombies;
-    private javax.swing.JTabbedPane Tabs;
     private javax.swing.JLabel Txt_AddPer;
     private javax.swing.JLabel Txt_Age;
     private javax.swing.JLabel Txt_Alt;
@@ -485,8 +669,29 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttong_Rang;
     private javax.swing.ButtonGroup buttong_TypP;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField tf_AtkP;
-    private javax.swing.JTextField tf_HpP;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JSpinner sp_Alt;
+    private javax.swing.JTabbedPane sp_Ata;
+    private javax.swing.JSpinner sp_AtkP;
+    private javax.swing.JSpinner sp_AtkZ;
+    private javax.swing.JSpinner sp_Dureza;
+    private javax.swing.JSpinner sp_Edad;
+    private javax.swing.JSpinner sp_Enojo;
+    private javax.swing.JSpinner sp_Expage;
+    private javax.swing.JSpinner sp_HpP;
+    private javax.swing.JSpinner sp_HpZ;
+    private javax.swing.JSpinner sp_Mexp;
+    private javax.swing.JSpinner sp_Peso;
+    private javax.swing.JSpinner sp_Size;
+    private javax.swing.JTextField tf_Color;
+    private javax.swing.JTextField tf_ColorB;
+    private javax.swing.JTextField tf_Img;
     private javax.swing.JTextField tf_NameP;
+    private javax.swing.JTextField tf_NameProj;
+    private javax.swing.JTextField tf_NameZ;
+    private javax.swing.JTextField tf_Per;
     // End of variables declaration//GEN-END:variables
 }
