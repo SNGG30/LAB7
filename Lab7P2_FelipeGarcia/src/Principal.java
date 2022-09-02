@@ -31,6 +31,13 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         sp_Ata = new javax.swing.JTabbedPane();
         T_Test = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        PlantName = new javax.swing.JLabel();
+        ZombieName = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        Btn_Test = new javax.swing.JButton();
         T_Plantas = new javax.swing.JPanel();
         Txt_Rang = new javax.swing.JLabel();
         Txt_TipoP = new javax.swing.JLabel();
@@ -95,15 +102,95 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("PLANTS VS ZOMBIES");
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Entidad");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Planta");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Defensa");
+        javax.swing.tree.DefaultMutableTreeNode treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Explosivo");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Disparo");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Zombie");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Clasico");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Cargado");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(jTree1);
+
+        PlantName.setText("-----");
+
+        ZombieName.setText("-----");
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane3.setViewportView(jTextArea2);
+
+        Btn_Test.setText("Testear");
+        Btn_Test.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_TestActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout T_TestLayout = new javax.swing.GroupLayout(T_Test);
         T_Test.setLayout(T_TestLayout);
         T_TestLayout.setHorizontalGroup(
             T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 688, Short.MAX_VALUE)
+            .addGroup(T_TestLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(T_TestLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PlantName, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                            .addComponent(ZombieName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(T_TestLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(T_TestLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(Btn_Test, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         T_TestLayout.setVerticalGroup(
             T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_TestLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+            .addGroup(T_TestLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(PlantName)
+                .addGap(18, 18, 18)
+                .addComponent(ZombieName)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Btn_Test)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         sp_Ata.addTab("Test", T_Test);
@@ -132,6 +219,11 @@ public class Principal extends javax.swing.JFrame {
 
         Btn_CreateP.setText("Crear");
         Btn_CreateP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Btn_CreateP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Btn_CreatePMouseClicked(evt);
+            }
+        });
         Btn_CreateP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_CreatePActionPerformed(evt);
@@ -436,7 +528,7 @@ public class Principal extends javax.swing.JFrame {
                                                     .addComponent(Txt_ColorB)
                                                     .addComponent(Txt_Direccion)
                                                     .addComponent(sp_Expage, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                                                 .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(Txt_AddPer)
                                                     .addComponent(tf_Per, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -596,6 +688,14 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_ImgActionPerformed
 
+    private void Btn_TestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_TestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_TestActionPerformed
+
+    private void Btn_CreatePMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_CreatePMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_CreatePMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -634,7 +734,9 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_CreateP;
     private javax.swing.JButton Btn_CreateZ;
+    private javax.swing.JButton Btn_Test;
     private javax.swing.JButton Btn_add;
+    private javax.swing.JLabel PlantName;
     private javax.swing.JRadioButton RB_Alto;
     private javax.swing.JRadioButton RB_Bajo;
     private javax.swing.JRadioButton RB_Defensa;
@@ -666,13 +768,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel Txt_TipoP;
     private javax.swing.JLabel Txt_TipoZ;
     private javax.swing.JLabel Txt_expage;
+    private javax.swing.JLabel ZombieName;
     private javax.swing.ButtonGroup buttong_Rang;
     private javax.swing.ButtonGroup buttong_TypP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTree jTree1;
     private javax.swing.JSpinner sp_Alt;
     private javax.swing.JTabbedPane sp_Ata;
     private javax.swing.JSpinner sp_AtkP;
