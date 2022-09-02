@@ -136,7 +136,7 @@
                       <Component id="jScrollPane3" min="-2" pref="246" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="Btn_Test" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -301,7 +301,7 @@
                           <Component id="RB_Disparo" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RB_Medio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <EmptySpace pref="35" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="RB_Defensa" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Txt_HpP" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -314,7 +314,7 @@
                                   <Component id="Btn_CreateP" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="sp_HpP" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="221" max="32767" attributes="0"/>
+                              <EmptySpace pref="222" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -533,7 +533,7 @@
                                           <Component id="Txt_TipoZ" min="-2" pref="43" max="-2" attributes="0"/>
                                           <Component id="sp_HpZ" min="-2" pref="109" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jRadioButton2" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Component id="RB_Cargado" min="-2" pref="98" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Component id="Btn_CreateZ" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -558,7 +558,7 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="Txt_AtkZ" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="sp_AtkZ" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                                  <Component id="RB_Clasico" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -599,7 +599,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Txt_NomZ" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Txt_Age" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -651,7 +651,7 @@
                                           <Component id="tf_ColorB" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="RB_Clasico" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -661,7 +661,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="RB_Cargado" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -757,6 +757,7 @@
                 <Property name="text" type="java.lang.String" value="+"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Btn_addMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_addActionPerformed"/>
               </Events>
             </Component>
@@ -767,7 +768,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="Nombes">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                     <Property name="columns" type="int" value="20"/>
@@ -780,20 +781,20 @@
             </Component>
             <Component class="javax.swing.JSpinner" name="sp_Expage">
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="RB_Clasico">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Clasico"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RB_ClasicoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="RB_Cargado">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cargado"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RB_CargadoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Btn_CreateZ">
@@ -801,6 +802,7 @@
                 <Property name="text" type="java.lang.String" value="Crear"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Btn_CreateZMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_CreateZActionPerformed"/>
               </Events>
             </Component>

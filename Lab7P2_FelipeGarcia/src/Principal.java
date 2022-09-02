@@ -18,6 +18,20 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        
+        P.add(new Disparo("Lechugas", "Verde", "Medio", "Lechuga", 300, 400));
+        P.add(new Disparo("Guisante", "Verde", "Alto", "Guisantralladora", 100, 500));
+        P.add(new Defensa(100, 80, 300, "Bajo", "Nuez", 0, 700));
+        P.add(new Disparo("Pincho", "Rojo", "Medio", "Cactus", 70, 500));
+        P.add(new Explosiva(500, "Bajo", "Patatapum", 100, 200));
+        
+        Z.add(new Clasico(3, new Bandera("Rojo", "DiscoC"), "Clasico", 100, 400));
+        ArrayList<String> Comidos = new ArrayList();
+        Comidos.add("Bryan");
+        Comidos.add("Diego");
+        Comidos.add("Alex");
+        Z.add(new Cargado(170, 35, 14, Comidos, "Furioso", 150, 200));
+        Z.add(new Clasico(30, new Bandera("Rojo", "DiscoD"), "Zombiestein", 2000, 700));
     }
 
     /**
@@ -92,11 +106,11 @@ public class Principal extends javax.swing.JFrame {
         tf_Per = new javax.swing.JTextField();
         Btn_add = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        Nombes = new javax.swing.JTextArea();
         sp_HpZ = new javax.swing.JSpinner();
         sp_Expage = new javax.swing.JSpinner();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        RB_Clasico = new javax.swing.JRadioButton();
+        RB_Cargado = new javax.swing.JRadioButton();
         Btn_CreateZ = new javax.swing.JButton();
         tf_ColorB = new javax.swing.JTextField();
         tf_Img = new javax.swing.JTextField();
@@ -202,7 +216,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Btn_Test)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         sp_Ata.addTab("Test", T_Test);
@@ -372,7 +386,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RB_Disparo)
                     .addComponent(RB_Medio))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RB_Defensa)
                     .addComponent(Txt_HpP)
@@ -383,7 +397,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Btn_CreateP)
                             .addComponent(sp_HpP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(221, Short.MAX_VALUE))
+                        .addContainerGap(222, Short.MAX_VALUE))
                     .addGroup(T_PlantasLayout.createSequentialGroup()
                         .addGroup(T_PlantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Txt_Mexp)
@@ -444,32 +458,42 @@ public class Principal extends javax.swing.JFrame {
         });
 
         Btn_add.setText("+");
+        Btn_add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Btn_addMouseClicked(evt);
+            }
+        });
         Btn_add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_addActionPerformed(evt);
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        Nombes.setEditable(false);
+        Nombes.setColumns(20);
+        Nombes.setRows(5);
+        jScrollPane1.setViewportView(Nombes);
 
-        jRadioButton1.setText("Clasico");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        RB_Clasico.setText("Clasico");
+        RB_Clasico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                RB_ClasicoActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("Cargado");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        RB_Cargado.setText("Cargado");
+        RB_Cargado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                RB_CargadoActionPerformed(evt);
             }
         });
 
         Btn_CreateZ.setText("Crear");
+        Btn_CreateZ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Btn_CreateZMouseClicked(evt);
+            }
+        });
         Btn_CreateZ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_CreateZActionPerformed(evt);
@@ -510,7 +534,7 @@ public class Principal extends javax.swing.JFrame {
                                     .addComponent(Txt_TipoZ, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(sp_HpZ, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(T_ZombiesLayout.createSequentialGroup()
-                                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(RB_Cargado, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(Btn_CreateZ)))
                                 .addGap(12, 12, 12)
@@ -529,7 +553,7 @@ public class Principal extends javax.swing.JFrame {
                                         .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(Txt_AtkZ)
                                             .addComponent(sp_AtkZ, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(RB_Clasico, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(90, 90, 90)
                                         .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(T_ZombiesLayout.createSequentialGroup()
@@ -555,7 +579,7 @@ public class Principal extends javax.swing.JFrame {
         T_ZombiesLayout.setVerticalGroup(
             T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(T_ZombiesLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(26, 26, 26)
                 .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Txt_NomZ)
                     .addComponent(Txt_Age)
@@ -599,14 +623,14 @@ public class Principal extends javax.swing.JFrame {
                                     .addComponent(Txt_TipoZ)
                                     .addComponent(tf_ColorB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(10, 10, 10)
-                                .addComponent(jRadioButton1))
+                                .addComponent(RB_Clasico))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_ZombiesLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Txt_Direccion)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(T_ZombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(T_ZombiesLayout.createSequentialGroup()
-                                .addComponent(jRadioButton2)
+                                .addComponent(RB_Cargado)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(T_ZombiesLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -680,13 +704,13 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Btn_addActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void RB_ClasicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB_ClasicoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_RB_ClasicoActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void RB_CargadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RB_CargadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_RB_CargadoActionPerformed
 
     private void Btn_CreateZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CreateZActionPerformed
         // TODO add your handling code here:
@@ -766,7 +790,70 @@ public class Principal extends javax.swing.JFrame {
             default:
                 
         }
+        
+        tf_NameP.setText("");
+        sp_AtkP.setValue(0);
+        sp_HpP.setValue(0);
+        sp_Mexp.setValue(0);
+        tf_NameProj.setText("");
+        tf_Color.setText("");
+        sp_Alt.setValue(0);
+        sp_Peso.setValue(0);
+        sp_Dureza.setValue(0);
+        
+        System.out.println(P.get(0).toString());
     }//GEN-LAST:event_Btn_CreatePMouseClicked
+
+    private void Btn_CreateZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_CreateZMouseClicked
+        // TODO add your handling code here:
+        
+        String Nombre = tf_NameZ.getText();
+        int Ataque = (int) sp_AtkZ.getValue();
+        int vida = (int) sp_HpZ.getValue();
+        
+        int choice = 0;
+        if(RB_Clasico.isSelected()){
+            choice = 1;
+        }else if(RB_Cargado.isSelected()){
+            choice = 2;
+        }
+        
+        switch(choice){
+            
+            case 1:{
+                int exp = (int) sp_Expage.getValue();
+                Bandera b = new Bandera(tf_ColorB.getText(), tf_Img.getText());
+                
+                Zombies zom = new Clasico(exp, b, Nombre, Ataque, vida);
+                Z.add(zom);
+            }
+            break;
+            
+            case 2:{
+                int tamaño = (int) sp_Size.getValue();
+                int edad = (int) sp_Edad.getValue();
+                int enojo = (int) sp_Enojo.getValue();
+                ArrayList<String> Personas = new ArrayList();
+                
+            }
+            break;
+        }
+        tf_NameZ.setText("");
+        sp_AtkZ.setValue(0);
+        sp_HpZ.setValue(0);
+        sp_Expage.setValue(0);
+        tf_ColorB.setText("");
+        tf_Img.setText("");
+        Nombes.setText("");
+    }//GEN-LAST:event_Btn_CreateZMouseClicked
+
+    private void Btn_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_addMouseClicked
+        // TODO add your handling code here:
+        String Person = tf_Per.getText();
+        
+        Nombes.append(Person + "\n");
+        tf_Per.setText("");
+    }//GEN-LAST:event_Btn_addMouseClicked
 
     /**
      * @param args the command line arguments
@@ -810,9 +897,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton Btn_CreateZ;
     private javax.swing.JButton Btn_Test;
     private javax.swing.JButton Btn_add;
+    private javax.swing.JTextArea Nombes;
     private javax.swing.JLabel PlantName;
     private javax.swing.JRadioButton RB_Alto;
     private javax.swing.JRadioButton RB_Bajo;
+    private javax.swing.JRadioButton RB_Cargado;
+    private javax.swing.JRadioButton RB_Clasico;
     private javax.swing.JRadioButton RB_Defensa;
     private javax.swing.JRadioButton RB_Disparo;
     private javax.swing.JRadioButton RB_Explosiva;
@@ -849,12 +939,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTree jTree1;
     private javax.swing.JSpinner sp_Alt;
