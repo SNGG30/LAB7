@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -28,6 +31,9 @@ public class Principal extends javax.swing.JFrame {
 
         buttong_Rang = new javax.swing.ButtonGroup();
         buttong_TypP = new javax.swing.ButtonGroup();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         sp_Ata = new javax.swing.JTabbedPane();
         T_Test = new javax.swing.JPanel();
@@ -94,6 +100,12 @@ public class Principal extends javax.swing.JFrame {
         Btn_CreateZ = new javax.swing.JButton();
         tf_ColorB = new javax.swing.JTextField();
         tf_Img = new javax.swing.JTextField();
+
+        jMenuItem1.setText("jMenuItem1");
+        jPopupMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("jMenuItem2");
+        jPopupMenu1.add(jMenuItem2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PVZ");
@@ -694,6 +706,66 @@ public class Principal extends javax.swing.JFrame {
 
     private void Btn_CreatePMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_CreatePMouseClicked
         // TODO add your handling code here:
+        
+        String Nombre = tf_NameP.getText();
+        int Ataque = (int) sp_AtkP.getValue();
+        int vida = (int) sp_HpP.getValue();
+        String Rango = "";
+        if(RB_Bajo.isSelected()){
+            Rango = "Bajo";
+        }else if(RB_Medio.isSelected()){
+            Rango = "Medio";
+        }else if(RB_Alto.isSelected()){
+            Rango = "Alto";
+        }
+        
+        int choice = 0;
+        
+        if(RB_Explosiva.isSelected()){
+            choice = 1;
+        }else if(RB_Disparo.isSelected()){
+            choice = 2;
+        }else if(RB_Defensa.isSelected()){
+            choice = 3;
+        }
+        
+        switch(choice){
+            
+            case 1:{
+                
+                int Magnitud = (int) sp_Mexp.getValue();
+                
+                Plantas plant = new Explosiva(Magnitud, Rango, Nombre, Ataque, vida);
+                P.add(plant);
+                
+            }
+            break;
+            
+            case 2:{
+                
+                String NombreP = tf_NameProj.getText();
+                String Color = tf_Color.getText();
+                
+                Plantas plant = new Disparo(NombreP, Color, Rango, Nombre, Ataque, vida);
+                P.add(plant);
+    
+            }
+            break;
+            
+            case 3:{
+                
+                int Altura = (int) sp_Alt.getValue();
+                int Peso = (int) sp_Peso.getValue();
+                int Dureza = (int) sp_Dureza.getValue();
+    
+                Plantas plant = new Defensa(Altura, Peso, Dureza, Rango, Nombre, Ataque, vida);
+                P.add(plant);
+            }
+            break;
+            
+            default:
+                
+        }
     }//GEN-LAST:event_Btn_CreatePMouseClicked
 
     /**
@@ -731,6 +803,8 @@ public class Principal extends javax.swing.JFrame {
         });
     }
 
+    ArrayList<Plantas> P = new ArrayList();
+    ArrayList<Zombies> Z = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_CreateP;
     private javax.swing.JButton Btn_CreateZ;
@@ -772,6 +846,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttong_Rang;
     private javax.swing.ButtonGroup buttong_TypP;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
