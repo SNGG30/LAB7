@@ -37,6 +37,6 @@ public class Disparo extends Plantas{
 
     @Override
     public String toString() {
-        return "Nombre=" + getNombre() + " Rango=" + getRango() + " Ataque=" + getAtaque() + " Vida=" + getVida() + " Disparo:(Proyectil=" + getNombreP() + " Color=" + getColor() + ")";
+        return "Nombre=" + getNombre() + " Rango=" + getRango() + " Ataque=" + getAtaque() + " Vida=" + getVida() + " Disparo:(Proyectil=" + NombreP + " Color=" + Color + ")";
     }
 }

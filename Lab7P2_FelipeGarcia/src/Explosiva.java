@@ -28,6 +28,6 @@ public class Explosiva extends Plantas{
 
     @Override
     public String toString() {
-        return "Explosiva{" + "Magnitud=" + Magnitud + '}';
+        return "Nombre=" + getNombre() + " Rango=" + getRango() + " Ataque=" + getAtaque() + " Vida=" + getVida() + " Explosiva:(Magnitud de explosion=" + Magnitud + ")";
     }
 }

@@ -46,6 +46,6 @@ public class Defensa extends Plantas{
 
     @Override
     public String toString() {
-        return "Defensa{" + "Altura=" + Altura + ", Peso=" + Peso + ", Dureza=" + Dureza + '}';
+        return "Nombre=" + getNombre() + " Rango=" + getRango() + " Ataque=" + getAtaque() + " Vida=" + getVida() + " Defensa:(Altura=" + Altura + " Peso=" + Peso + " Dureza=" + Dureza + ")";
     }
 }

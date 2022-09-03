@@ -36,6 +36,6 @@ public class Bandera {
 
     @Override
     public String toString() {
-        return "Bandera{" + "color=" + color + ", img=" + img + '}';
+        return "[Color:" + color + " Direccion:" + img + "]";
     }
 }

@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -801,7 +803,10 @@ public class Principal extends javax.swing.JFrame {
         sp_Peso.setValue(0);
         sp_Dureza.setValue(0);
         
-        System.out.println(P.get(0).toString());
+        for (Plantas plantas : P) {
+            System.out.println(plantas.toString());
+        }
+        System.out.println();
     }//GEN-LAST:event_Btn_CreatePMouseClicked
 
     private void Btn_CreateZMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_CreateZMouseClicked
@@ -845,6 +850,11 @@ public class Principal extends javax.swing.JFrame {
         tf_ColorB.setText("");
         tf_Img.setText("");
         Nombes.setText("");
+        
+        for (Zombies zombies : Z) {
+            System.out.println(zombies.toString());
+        }
+        System.out.println();
     }//GEN-LAST:event_Btn_CreateZMouseClicked
 
     private void Btn_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_addMouseClicked
@@ -890,6 +900,17 @@ public class Principal extends javax.swing.JFrame {
         });
     }
 
+    public void cargarArbol(){
+        
+        DefaultTreeModel Model = (DefaultTreeModel) jTree1.getModel();
+        DefaultMutableTreeNode Plantas;
+        DefaultMutableTreeNode Zombies;
+        
+        Plantas = (DefaultMutableTreeNode) Model.getChild(Model.getRoot(), 0);
+        DefaultMutableTreeNode Defensa;
+        
+        Defensa = (DefaultMutableTreeNode) Model.getChild(Plantas.getRoot(), 0);
+    }
     ArrayList<Plantas> P = new ArrayList();
     ArrayList<Zombies> Z = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables

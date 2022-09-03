@@ -59,7 +59,7 @@ public class Cargado extends Zombies{
     
     @Override
     public String toString() {
-        return "Cargado{" + "tamaño=" + tamaño + ", edad=" + edad + ", enojo=" + enojo + ", Personas=" + Personas + '}';
+        return "Nombre=" + getNombre() + " Ataque=" + getAtaque() + " Vida=" + getVida() + " Cargado:(Tamaño:" + tamaño + " Edad:" + edad + " Enojo:" + enojo + " Personas:" + Personas + ")";
     }
 
     
