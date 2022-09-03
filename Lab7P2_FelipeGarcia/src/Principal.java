@@ -34,6 +34,8 @@ public class Principal extends javax.swing.JFrame {
         Comidos.add("Alex");
         Z.add(new Cargado(170, 35, 14, Comidos, "Furioso", 150, 200));
         Z.add(new Clasico(30, new Bandera("Rojo", "DiscoD"), "Zombiestein", 2000, 700));
+        
+        cargarArbol();
     }
 
     /**
@@ -60,6 +62,12 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         Btn_Test = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         T_Plantas = new javax.swing.JPanel();
         Txt_Rang = new javax.swing.JLabel();
         Txt_TipoP = new javax.swing.JLabel();
@@ -176,11 +184,35 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea2);
 
         Btn_Test.setText("Testear");
+        Btn_Test.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Btn_TestMouseClicked(evt);
+            }
+        });
         Btn_Test.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_TestActionPerformed(evt);
             }
         });
+
+        jButton1.setText("Pasar para probar");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Indices");
+
+        jLabel3.setText("Planta");
+
+        jLabel4.setText("Zombie");
 
         javax.swing.GroupLayout T_TestLayout = new javax.swing.GroupLayout(T_Test);
         T_Test.setLayout(T_TestLayout);
@@ -188,36 +220,66 @@ public class Principal extends javax.swing.JFrame {
             T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(T_TestLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(T_TestLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PlantName, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-                            .addComponent(ZombieName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(T_TestLayout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(T_TestLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(jLabel4)))
+                        .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(T_TestLayout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(PlantName, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                                    .addComponent(ZombieName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(T_TestLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(17, Short.MAX_VALUE))
                     .addGroup(T_TestLayout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(T_TestLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(Btn_Test, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Btn_Test, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83))))
         );
         T_TestLayout.setVerticalGroup(
             T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, T_TestLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
             .addGroup(T_TestLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(PlantName)
-                .addGap(18, 18, 18)
-                .addComponent(ZombieName)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Btn_Test)
+                .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(T_TestLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(PlantName)
+                        .addGap(18, 18, 18)
+                        .addComponent(ZombieName)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(T_TestLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(3, 3, 3)))
+                .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(T_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1))
+                    .addComponent(Btn_Test))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -865,6 +927,42 @@ public class Principal extends javax.swing.JFrame {
         tf_Per.setText("");
     }//GEN-LAST:event_Btn_addMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        String idx1 = jTextField1.getText();
+        String idx2 = jTextField2.getText();
+        
+        int id1 = Integer.parseInt(idx1);
+        int id2 = Integer.parseInt(idx2);
+        
+        PlantName.setText(P.get(id1).getNombre());
+        ZombieName.setText(Z.get(id2).getNombre());
+        
+        jTextField1.setEditable(false);
+        jTextField2.setEditable(false);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void Btn_TestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_TestMouseClicked
+        // TODO add your handling code here:
+        String idx1 = jTextField1.getText();
+        String idx2 = jTextField2.getText();
+        int id1 = Integer.parseInt(idx1);
+        int id2 = Integer.parseInt(idx2);
+        
+        jTextArea2.append("Planta: " + P.get(id1).getNombre() + " Ataque: " + P.get(id1).getAtaque() + Z.get(id2).getNombre() + " Ataque: " + Z.get(id2).getAtaque() + "\n");
+        if(P.get(id1).getAtaque() < Z.get(id2).getAtaque()){
+            jTextArea2.append("El zombie: " + Z.get(id2).getNombre() + "gana");
+        }else{
+            jTextArea2.append("La planta: " + P.get(id1).getNombre() + " gana");
+        }
+        
+        jTextArea2.append("\n");
+    }//GEN-LAST:event_Btn_TestMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -965,7 +1063,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel ZombieName;
     private javax.swing.ButtonGroup buttong_Rang;
     private javax.swing.ButtonGroup buttong_TypP;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -973,6 +1075,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTree jTree1;
     private javax.swing.JSpinner sp_Alt;
     private javax.swing.JTabbedPane sp_Ata;
