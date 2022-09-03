@@ -903,13 +903,22 @@ public class Principal extends javax.swing.JFrame {
     public void cargarArbol(){
         
         DefaultTreeModel Model = (DefaultTreeModel) jTree1.getModel();
+        DefaultMutableTreeNode Entidad = (DefaultMutableTreeNode) Model.getRoot();
         DefaultMutableTreeNode Plantas;
         DefaultMutableTreeNode Zombies;
         
         Plantas = (DefaultMutableTreeNode) Model.getChild(Model.getRoot(), 0);
-        DefaultMutableTreeNode Defensa;
+        DefaultMutableTreeNode Defensa = (DefaultMutableTreeNode) Model.getChild(Plantas, 0);
+        DefaultMutableTreeNode Bajo = (DefaultMutableTreeNode) Model.getChild(Defensa, 0);
         
-        Defensa = (DefaultMutableTreeNode) Model.getChild(Plantas.getRoot(), 0);
+        String temp = P.get(0).toString();
+        Bajo.add(new DefaultMutableTreeNode(temp));
+        
+        
+        Defensa.add(Bajo);
+        Plantas.add(Defensa);
+        Entidad.add(Plantas);
+        Model.reload();
     }
     ArrayList<Plantas> P = new ArrayList();
     ArrayList<Zombies> Z = new ArrayList();
