@@ -1008,10 +1008,15 @@ public class Principal extends javax.swing.JFrame {
         Plantas = (DefaultMutableTreeNode) Model.getChild(Model.getRoot(), 0);
         DefaultMutableTreeNode Defensa = (DefaultMutableTreeNode) Model.getChild(Plantas, 0);
         DefaultMutableTreeNode Bajo = (DefaultMutableTreeNode) Model.getChild(Defensa, 0);
+        DefaultMutableTreeNode Medio = (DefaultMutableTreeNode) Model.getChild(Defensa, 1);
+        DefaultMutableTreeNode Alto = (DefaultMutableTreeNode) Model.getChild(Defensa, 2);
+        for(int i = 0; i < P.size(); i++){
+        String temp = P.get(i).toString();
         
-        String temp = P.get(0).toString();
-        Bajo.add(new DefaultMutableTreeNode(temp));
-        
+        if(P.get(i).getRango().equals("Bajo") && P.get(i) instanceof Defensa){
+            Bajo.add(new DefaultMutableTreeNode(temp));
+        }
+       }
         
         Defensa.add(Bajo);
         Plantas.add(Defensa);
